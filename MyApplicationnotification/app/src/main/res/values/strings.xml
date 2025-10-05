@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">My Application notification</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    
+    <!-- Reservation -->
+    <string name="reservation_title">Prenotazione</string>
+    <string name="reservation_name">Nome</string>
+    <string name="reservation_phone">Telefono</string>
+    <string name="reservation_guests">Numero di persone</string>
+    <string name="reservation_date">Data</string>
+    <string name="reservation_time">Ora</string>
+    <string name="reservation_notes">Note (opzionale)</string>
+    <string name="reservation_cta">Conferma prenotazione</string>
+    <string name="reservation_invalid">Compila tutti i campi obbligatori</string>
+    <string name="reservation_success">Prenotazione inviata!</string>
+    <string name="go_to_reservation">Prenota un tavolo</string>
+    <string name="reservation_success_cta">Torna alla home"</string>
+    <!-- Sections -->
+    <string name="home_title">Benvenuto</string>
+    <string name="home_gallery">Galleria</string>
+    <string name="home_pizzas">Le nostre pizze</string>
+    <string name="home_reservation">Prenotazione</string>
+    <string name="home_contacts">Contatti</string>
+    <string name="contacts_title">Contatti</string>
+    <string name="contacts_phone_label">Telefono</string>
+    <string name="contacts_email_label">Email</string>
+    <string name="contacts_address_label">Indirizzo</string>
+    <string name="contacts_call">Chiama</string>
+</resources>
