@@ -1,4 +1,4 @@
-package simone.pizzeria4.myapplicationnotification;
+package app.src.main.java.simone.pizzeria4.myapplicationnotification;
 
 import android.content.Intent;
 import android.net.Uri;
