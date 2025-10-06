@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btn_save" type="id" />
+    <item name="switch_vegan" type="id" />
+    <item name="switch_vegetarian" type="id" />
+    <item name="switch_gluten_free" type="id" />
+    <item name="chip_group_allergens" type="id" />
+    <item name="btn_loyalty" type="id" />
+    <item name="btn_pizza_builder" type="id" />
+    <item name="btn_my_reservations" type="id" />
+    <item name="action_FirstFragment_to_MyReservationsFragment" type="id" />
+    <item name="chip_vegan" type="id" />
+    <item name="chip_vegetarian" type="id" />
+</resources>

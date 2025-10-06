@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="simone.pizzeria4.app.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_ReservationFragment"
+            app:destination="@id/ReservationFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_GalleryFragment"
+            app:destination="@id/GalleryFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_PizzasFragment"
+            app:destination="@id/PizzasFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_ContactsFragment"
+            app:destination="@id/ContactsFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_LoyaltyFragment"
+            app:destination="@id/LoyaltyFragment" />
+
+        <action
+            android:id="@+id/action_FirstFragment_to_PizzaBuilderFragment"
+            app:destination="@id/PizzaBuilderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="simone.pizzeria4.app.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ReservationFragment"
+        android:name="simone.pizzeria4.app.ReservationFragment"
+        android:label="@string/reservation_title"
+        tools:layout="@layout/fragment_reservation" />
+    <fragment
+        android:id="@+id/GalleryFragment"
+        android:name="simone.pizzeria4.app.GalleryFragment"
+        android:label="@string/home_gallery"
+        tools:layout="@layout/fragment_gallery" />
+    <fragment
+        android:id="@+id/PizzasFragment"
+        android:name="simone.pizzeria4.app.PizzasFragment"
+        android:label="@string/home_pizzas"
+        tools:layout="@layout/fragment_pizzas" />
+    <fragment
+        android:id="@+id/ContactsFragment"
+        android:name="simone.pizzeria4.app.ContactsFragment"
+        android:label="@string/contacts_title"
+        tools:layout="@layout/fragment_contacts" />
+    <fragment
+        android:id="@+id/LoyaltyFragment"
+        android:name="simone.pizzeria4.app.LoyaltyFragment"
+        android:label="Carta Fedeltà"
+        tools:layout="@layout/fragment_loyalty" />
+
+    <fragment
+        android:id="@+id/PizzaBuilderFragment"
+        android:name="simone.pizzeria4.app.PizzaBuilderFragment"
+        android:label="Crea la tua pizza"
+        tools:layout="@layout/fragment_pizza_builder" />
+
+    <fragment
+        android:id="@+id/MyReservationsFragment"
+        android:name="simone.pizzeria4.app.ReservationFragment"
+        android:label="Le mie prenotazioni"
+        tools:layout="@layout/fragment_my_reservations" />
+
+    <fragment
+        android:id="@+id/DietarySettingsFragment"
+        android:name="simone.pizzeria4.app.DietarySettingsFragment"
+        android:label="Preferenze Dietetiche"
+        tools:layout="@layout/fragment_dietary_settings" />
+</navigation>
