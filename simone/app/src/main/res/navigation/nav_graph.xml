@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="simone.pizzeria4.app.FirstFragment"
+        android:name="simone.pizzeria.app.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="simone.pizzeria4.app.SecondFragment"
+        android:name="simone.pizzeria.app.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
@@ -46,45 +46,45 @@
     </fragment>
     <fragment
         android:id="@+id/ReservationFragment"
-        android:name="simone.pizzeria4.app.ReservationFragment"
+        android:name="simone.pizzeria.app.ReservationFragment"
         android:label="@string/reservation_title"
         tools:layout="@layout/fragment_reservation" />
     <fragment
         android:id="@+id/GalleryFragment"
-        android:name="simone.pizzeria4.app.GalleryFragment"
+        android:name="simone.pizzeria.app.GalleryFragment"
         android:label="@string/home_gallery"
         tools:layout="@layout/fragment_gallery" />
     <fragment
         android:id="@+id/PizzasFragment"
-        android:name="simone.pizzeria4.app.PizzasFragment"
+        android:name="simone.pizzeria.app.PizzasFragment"
         android:label="@string/home_pizzas"
         tools:layout="@layout/fragment_pizzas" />
     <fragment
         android:id="@+id/ContactsFragment"
-        android:name="simone.pizzeria4.app.ContactsFragment"
+        android:name="simone.pizzeria.app.ContactsFragment"
         android:label="@string/contacts_title"
         tools:layout="@layout/fragment_contacts" />
     <fragment
         android:id="@+id/LoyaltyFragment"
-        android:name="simone.pizzeria4.app.LoyaltyFragment"
+        android:name="simone.pizzeria.app.LoyaltyFragment"
         android:label="Carta Fedeltà"
         tools:layout="@layout/fragment_loyalty" />
 
     <fragment
         android:id="@+id/PizzaBuilderFragment"
-        android:name="simone.pizzeria4.app.PizzaBuilderFragment"
+        android:name="simone.pizzeria.app.PizzaBuilderFragment"
         android:label="Crea la tua pizza"
         tools:layout="@layout/fragment_pizza_builder" />
 
     <fragment
         android:id="@+id/MyReservationsFragment"
-        android:name="simone.pizzeria4.app.ReservationFragment"
+        android:name="simone.pizzeria.app.ReservationFragment"
         android:label="Le mie prenotazioni"
         tools:layout="@layout/fragment_my_reservations" />
 
     <fragment
         android:id="@+id/DietarySettingsFragment"
-        android:name="simone.pizzeria4.app.DietarySettingsFragment"
+        android:name="simone.pizzeria.app.DietarySettingsFragment"
         android:label="Preferenze Dietetiche"
         tools:layout="@layout/fragment_dietary_settings" />
 </navigation>

@@ -3,10 +3,10 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 36
     buildToolsVersion "35.0.0"
-    namespace = "simone.pizzeria4.app"
+    namespace = "simone.pizzeria.app"
 
     defaultConfig {
-        applicationId "simone.pizzeria4.app"
+        applicationId "simone.pizzeria.app"
         minSdkVersion 21
         targetSdkVersion 35
         versionCode 1
@@ -48,4 +48,9 @@ dependencies {
     // RecyclerView
     implementation 'androidx.recyclerview:recyclerview:1.4.0'
 
+}
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }
