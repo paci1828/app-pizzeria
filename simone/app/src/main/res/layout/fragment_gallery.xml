@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA">
+    android:fitsSystemWindows="true"
+    android:background="?android:attr/colorBackground">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -17,30 +18,33 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@color/colorPrimary"
-            android:padding="24dp">
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="📸"
-                android:textSize="48sp"
+                android:textSize="32sp"
                 android:layout_gravity="center_horizontal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/la_nostra_galleria"
-                android:textSize="24sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="8dp" />
+                android:layout_marginTop="4dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Scopri il nostro locale e le nostre creazioni"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 android:textColor="@android:color/white"
                 android:alpha="0.8"
                 android:layout_gravity="center_horizontal"
@@ -62,8 +66,8 @@
             <!-- Featured Image -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="250dp"
-                app:cardCornerRadius="16dp"
+                android:layout_height="200dp"
+                app:cardCornerRadius="12dp"
                 app:cardElevation="4dp"
                 android:layout_marginBottom="16dp">
 
@@ -75,29 +79,28 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@mipmap/pizza"
+                        android:src="@drawable/forno"
                         android:contentDescription="@string/featured" />
-
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@drawable/ic_launcher_background" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="bottom|start"
-                        android:layout_margin="20dp"
+                        android:layout_margin="16dp"
                         android:text="@string/il_nostro_forno_a_legna"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        android:shadowColor="#000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="top|end"
-                        android:layout_margin="16dp"
+                        android:layout_margin="12dp"
                         android:text="⭐ In evidenza"
                         android:textSize="12sp"
                         android:textStyle="bold"
@@ -113,9 +116,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🍕 Le nostre pizze"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
-                android:textColor="#212121"
+                android:textColor="?android:attr/textColorPrimary"
                 android:layout_marginBottom="12dp"
                 android:layout_marginStart="4dp" />
 
@@ -125,7 +128,7 @@
                 android:columnCount="2"
                 android:layout_marginBottom="24dp">
 
-                <!-- Pizza 1 -->
+                <!-- Pizza 1 - Margherita -->
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="180dp"
@@ -136,34 +139,35 @@
 
                     <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF">
 
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:text="🍕"-->
+<!--                            android:textSize="64sp" />-->
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
-                            android:src="@mipmap/pizza_margherita"
-                            android:contentDescription="@string/pizza_margherita" />
-
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/gradient_overlay" />
-
+                            android:src="@drawable/margherita"
+                            android:contentDescription="Pizza Margherita" />
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="bottom|start"
-                            android:layout_margin="12dp"
+                            android:layout_gravity="bottom"
+                            android:padding="6dp"
                             android:text="Margherita"
                             android:textSize="14sp"
                             android:textStyle="bold"
-                            android:textColor="@android:color/white" />
+                            android:textColor="#FFFFFF"
+                            android:gravity="center" />
                     </FrameLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Pizza 2 -->
+                <!-- Pizza 2 - Diavola -->
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="180dp"
@@ -180,28 +184,26 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
-                            android:src="@mipmap/diavola"
+                            android:src="@drawable/diavola"
                             android:contentDescription="Pizza Diavola" />
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/gradient_overlay" />
-
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="bottom|start"
-                            android:layout_margin="12dp"
+                            android:layout_gravity="bottom"
+                            android:padding="12dp"
                             android:text="Diavola"
                             android:textSize="14sp"
                             android:textStyle="bold"
-                            android:textColor="@android:color/white" />
+                            android:textColor="@android:color/white"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="3" />
                     </FrameLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Pizza 3 -->
+                <!-- Pizza 3 - 4 Formaggi -->
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="180dp"
@@ -218,28 +220,26 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
-                            android:src="@mipmap/pizza_quattro_formaggi"
+                            android:src="@drawable/quattroformaggi"
                             android:contentDescription="Quattro Formaggi" />
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/gradient_overlay" />
-
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="bottom|start"
-                            android:layout_margin="12dp"
+                            android:layout_gravity="bottom"
+                            android:padding="12dp"
                             android:text="4 Formaggi"
                             android:textSize="14sp"
                             android:textStyle="bold"
-                            android:textColor="@android:color/white" />
+                            android:textColor="@android:color/white"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="3" />
                     </FrameLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-                <!-- Pizza 4 -->
+                <!-- Pizza 4 - Capricciosa -->
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp"
                     android:layout_height="180dp"
@@ -256,24 +256,22 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:scaleType="centerCrop"
-                            android:src="@mipmap/capricciosa"
+                            android:src="@drawable/capricciosa"
                             android:contentDescription="Capricciosa" />
 
-                        <View
-                            android:layout_width="match_parent"
-                            android:layout_height="60dp"
-                            android:layout_gravity="bottom"
-                            android:background="@drawable/gradient_overlay" />
-
                         <TextView
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="bottom|start"
-                            android:layout_margin="12dp"
+                            android:layout_gravity="bottom"
+                            android:padding="12dp"
                             android:text="Capricciosa"
                             android:textSize="14sp"
                             android:textStyle="bold"
-                            android:textColor="@android:color/white" />
+                            android:textColor="@android:color/white"
+                            android:shadowColor="#000000"
+                            android:shadowDx="1"
+                            android:shadowDy="1"
+                            android:shadowRadius="3" />
                     </FrameLayout>
                 </com.google.android.material.card.MaterialCardView>
             </GridLayout>
@@ -283,13 +281,13 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="🏠 Il nostro locale"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold"
-                android:textColor="#212121"
+                android:textColor="?android:attr/textColorPrimary"
                 android:layout_marginBottom="12dp"
                 android:layout_marginStart="4dp" />
 
-            <!-- Locale images -->
+            <!-- Sala interna -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
@@ -305,27 +303,26 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@mipmap/arredo_pizzeria"
+                        android:src="@drawable/arredopizzeria"
                         android:contentDescription="Interno locale" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:layout_gravity="bottom"
-                        android:background="@drawable/gradient_overlay" />
-
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|start"
-                        android:layout_margin="16dp"
+                        android:layout_gravity="bottom"
+                        android:padding="16dp"
                         android:text="Sala interna"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        android:shadowColor="#000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4" />
                 </FrameLayout>
             </com.google.android.material.card.MaterialCardView>
 
+            <!-- Dehors esterno -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
@@ -341,24 +338,22 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
-                        android:src="@mipmap/pizzeria_esterno"
+                        android:src="@drawable/pizzeriaesterno"
                         android:contentDescription="Esterno locale" />
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:layout_gravity="bottom"
-                        android:background="@drawable/gradient_overlay" />
-
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|start"
-                        android:layout_margin="16dp"
+                        android:layout_gravity="bottom"
+                        android:padding="16dp"
                         android:text="Dehors esterno"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:textColor="@android:color/white" />
+                        android:textColor="@android:color/white"
+                        android:shadowColor="#000000"
+                        android:shadowDx="2"
+                        android:shadowDy="2"
+                        android:shadowRadius="4" />
                 </FrameLayout>
             </com.google.android.material.card.MaterialCardView>
 
@@ -366,7 +361,7 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="16dp"
+                app:cardCornerRadius="12dp"
                 app:cardElevation="2dp"
                 app:cardBackgroundColor="#E8F5E9"
                 android:layout_marginBottom="32dp">

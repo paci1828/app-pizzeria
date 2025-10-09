@@ -35,7 +35,7 @@
     <string name="contacts_address_label">Indirizzo</string>
     <string name="contacts_call">Chiama</string>
     <string name="benvenuto_in">Benvenuto in</string>
-    <string name="pizzeria_4">Pizzeria 4</string>
+    <string name="pizzeria_4">Pizzeria App</string>
     <string name="autentica_cucina_italiana_dal_1995">Autentica cucina italiana dal 1995</string>
     <string name="azioni_rapide">Azioni rapide</string>
     <string name="prenota">Prenota</string>
@@ -116,12 +116,14 @@
     <string name="loyalty_title">Carta Fedeltà</string>
     <string name="loyalty_points">Punti</string>
     <string name="loyalty_tier">Livello</string>
+    <string name = "loyaltyIcon">🏅</string>
 
     <!-- Pizza Builder -->
     <string name="pizza_builder_title">Crea la tua pizza</string>
     <string name="pizza_builder_base_price">Prezzo base: €5.00</string>
     <string name="pizza_builder_save">Salva pizza</string>
     <string name="pizza_builder_share">Condividi</string>
+    <string name="pizzaBuilderIcon">🍽️</string>
 
     <!-- Reviews -->
     <string name="reviews_title">Recensioni</string>
@@ -139,4 +141,6 @@
     <string name="my_reservations_modify">Modifica</string>
     <string name="my_reservations_cancel">Cancella</string>
     <string name="my_reservations_empty">Nessuna prenotazione attiva</string>
+    <string name="myReservationsIcon">📋</string>
+  
 </resources>

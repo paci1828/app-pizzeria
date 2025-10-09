@@ -1,364 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA"
+    android:orientation="vertical"
+    android:background="?android:attr/colorBackground"
+    android:fitsSystemWindows="true"
     tools:context="simone.pizzeria.app.FirstFragment">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/app_bar"
+    <!-- Header semplice -->
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:elevation="0dp"
-        app:elevation="0dp">
+        android:layout_height="200dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp">
 
-        <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:layout_width="match_parent"
-            android:layout_height="280dp"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            app:contentScrim="@color/colorPrimary"
-            app:expandedTitleMarginStart="24dp"
-            app:expandedTitleMarginBottom="32dp">
-
-            <!-- Hero Image with gradient overlay -->
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:src="@mipmap/ic_launcher"
-                    android:contentDescription="@string/app_name" />
-
-                <!-- Gradient overlay -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/gradient_overlay" />
-
-                <!-- Welcome content -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:orientation="vertical"
-                    android:padding="24dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/benvenuto_in"
-                        android:textColor="@android:color/white"
-                        android:textSize="16sp"
-                        android:alpha="0.9" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/pizzeria_4"
-                        android:textColor="@android:color/white"
-                        android:textSize="36sp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="4dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/autentica_cucina_italiana_dal_1995"
-                        android:textColor="@android:color/white"
-                        android:textSize="14sp"
-                        android:alpha="0.8"
-                        android:layout_marginTop="8dp" />
-                </LinearLayout>
-            </FrameLayout>
-
-        </com.google.android.material.appbar.CollapsingToolbarLayout>
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:text="@string/benvenuto_in"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:alpha="0.9" />
 
-            <!-- Quick Actions Card -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="2dp"
-                android:layout_marginBottom="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/pizzeria_4"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/autentica_cucina_italiana_dal_1995"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:alpha="0.8"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/azioni_rapide"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="#212121"
-                        android:layout_marginBottom="16dp" />
+    <!-- RecyclerView per i bottoni -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"
+        android:clipToPadding="false" />
 
-                    <!-- Grid of action buttons -->
-                    <GridLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:columnCount="2"
-                        android:rowCount="2">
-
-                        <!-- Reservation Button -->
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/btn_reservation"
-                            android:layout_width="0dp"
-                            android:layout_height="120dp"
-                            android:layout_columnWeight="1"
-                            android:layout_margin="8dp"
-                            app:cardCornerRadius="12dp"
-                            app:cardBackgroundColor="#FF6B6B"
-                            app:cardElevation="4dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:gravity="center"
-                                android:padding="16dp">
-
-                                <TextView
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
-                                    android:text="@string/prenotaIcon"
-                                    android:textSize="32sp"
-                                    android:gravity="center" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/prenota"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="16sp"
-                                    android:textStyle="bold"
-                                    android:layout_marginTop="8dp" />
-                            </LinearLayout>
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <!-- Pizzas Button -->
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/btn_pizzas"
-                            android:layout_width="0dp"
-                            android:layout_height="120dp"
-                            android:layout_columnWeight="1"
-                            android:layout_margin="8dp"
-                            app:cardCornerRadius="12dp"
-                            app:cardBackgroundColor="#FFA726"
-                            app:cardElevation="4dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:gravity="center"
-                                android:padding="16dp">
-
-                                <TextView
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
-                                    android:text="@string/menu"
-                                    android:textSize="32sp"
-                                    android:gravity="center" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/menuNoIcon"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="16sp"
-                                    android:textStyle="bold"
-                                    android:layout_marginTop="8dp" />
-                            </LinearLayout>
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <!-- Gallery Button -->
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/btn_gallery"
-                            android:layout_width="0dp"
-                            android:layout_height="120dp"
-                            android:layout_columnWeight="1"
-                            android:layout_margin="8dp"
-                            app:cardCornerRadius="12dp"
-                            app:cardBackgroundColor="#66BB6A"
-                            app:cardElevation="4dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:gravity="center"
-                                android:padding="16dp">
-
-                                <TextView
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
-                                    android:text="@string/galleriaNoIcon"
-                                    android:textSize="32sp"
-                                    android:gravity="center" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/galleria"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="16sp"
-                                    android:textStyle="bold"
-                                    android:layout_marginTop="8dp" />
-                            </LinearLayout>
-                        </com.google.android.material.card.MaterialCardView>
-
-                        <!-- Contacts Button -->
-                        <com.google.android.material.card.MaterialCardView
-                            android:id="@+id/btn_contacts"
-                            android:layout_width="0dp"
-                            android:layout_height="120dp"
-                            android:layout_columnWeight="1"
-                            android:layout_margin="8dp"
-                            app:cardCornerRadius="12dp"
-                            app:cardBackgroundColor="#42A5F5"
-                            app:cardElevation="4dp">
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:orientation="vertical"
-                                android:gravity="center"
-                                android:padding="16dp">
-
-                                <TextView
-                                    android:layout_width="48dp"
-                                    android:layout_height="48dp"
-                                    android:text="@string/telefonoIcon"
-                                    android:textSize="32sp"
-                                    android:gravity="center" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/contatti"
-                                    android:textColor="@android:color/white"
-                                    android:textSize="16sp"
-                                    android:textStyle="bold"
-                                    android:layout_marginTop="8dp" />
-                            </LinearLayout>
-                        </com.google.android.material.card.MaterialCardView>
-
-                    </GridLayout>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Featured Info Card -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="2dp"
-                android:layout_marginBottom="16dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/la_nostra_specialit"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:textColor="#212121"
-                        android:layout_marginBottom="12dp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/dettagli_impasto"
-                        android:textSize="14sp"
-                        android:textColor="#666666"
-                        android:lineSpacingExtra="4dp" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <!-- Hours Card -->
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="16dp"
-                app:cardElevation="2dp"
-                android:layout_marginBottom="16dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="20dp">
-
-                    <TextView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:text="@string/orario_icona"
-                        android:textSize="32sp"
-                        android:gravity="center" />
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:layout_marginStart="16dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/orari_di_apertura"
-                            android:textSize="16sp"
-                            android:textStyle="bold"
-                            android:textColor="#212121" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/orario_apertura"
-                            android:textSize="14sp"
-                            android:textColor="#666666"
-                            android:layout_marginTop="4dp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/luned_chiuso"
-                            android:textSize="12sp"
-                            android:textColor="#999999"
-                            android:layout_marginTop="2dp" />
-                    </LinearLayout>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

@@ -10,5 +10,11 @@
     <item name="btn_my_reservations" type="id" />
     <item name="action_FirstFragment_to_MyReservationsFragment" type="id" />
     <item name="chip_vegan" type="id" />
-    <item name="chip_vegetarian" type="id" />
+    <item name="chip_vegetarian"  type="id"> </item>
+    <item name="btn_contacts" type="id" />
+    <item name="btn_gallery" type="id" />
+    <item name="btn_pizzas" type="id" />
+    <item name="btn_reservation" type="id" />
+    <item name="app_bar" type="id" />
+    <item name="recycler_buttons" type="id" />
 </resources>
