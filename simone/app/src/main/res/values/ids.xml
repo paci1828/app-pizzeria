@@ -17,4 +17,7 @@
     <item name="btn_reservation" type="id" />
     <item name="app_bar" type="id" />
     <item name="recycler_buttons" type="id" />
+    <item name="tv_emoji" type="id" />
+    <item name="tv_name" type="id" />
+    <item name="tv_price" type="id" />
 </resources>

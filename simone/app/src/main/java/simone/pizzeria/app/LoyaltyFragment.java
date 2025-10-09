@@ -140,8 +140,8 @@ public class LoyaltyFragment extends Fragment {
 
             ViewHolder(View view) {
                 super(view);
-                tvDescription = view.findViewById(R.id.tv_description);
-                tvDate = view.findViewById(R.id.tv_date);
+                tvDescription = view.findViewById(R.id.tv_next_reward);
+                tvDate = view.findViewById(R.id.tv_reservation_date);
                 tvPoints = view.findViewById(R.id.tv_points);
             }
         }

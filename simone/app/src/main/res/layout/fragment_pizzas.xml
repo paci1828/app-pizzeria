@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA">
+    android:background="?android:attr/colorBackground">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -59,6 +59,40 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <!-- Filters -->
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_filters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                app:singleSelection="false">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_vegan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌱 Vegana"
+                    android:checkable="true"
+                    style="@style/Widget.Material3.Chip.Filter" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_vegetarian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🥦 Vegetariana"
+                    android:checkable="true"
+                    style="@style/Widget.Material3.Chip.Filter" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_gluten_free"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌾 Senza glutine"
+                    android:checkable="true"
+                    style="@style/Widget.Material3.Chip.Filter" />
+
+            </com.google.android.material.chip.ChipGroup>
+
             <!-- Classiche Section -->
             <TextView
                 android:layout_width="wrap_content"
@@ -66,7 +100,7 @@
                 android:text="@string/classiche"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="#212121"
+                android:textColor="?android:attr/textColorPrimary"
                 android:layout_marginBottom="12dp"
                 android:layout_marginStart="4dp" />
 
@@ -76,6 +110,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
                 android:layout_marginBottom="12dp">
 
                 <LinearLayout
@@ -90,7 +125,7 @@
                         android:text="@string/pomodoro_icona"
                         android:textSize="40sp"
                         android:gravity="center"
-                        android:background="#FFF3E0"
+                        android:background="?attr/colorPrimaryContainer"
                         android:layout_marginEnd="16dp" />
 
                     <LinearLayout
@@ -105,14 +140,14 @@
                             android:text="@string/margherita"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:textColor="#212121" />
+                            android:textColor="?android:attr/textColorPrimary" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/pomodoro_mozzarella_fior_di_latte_basilico_fresco"
                             android:textSize="14sp"
-                            android:textColor="#666666"
+                            android:textColor="?android:attr/textColorSecondary"
                             android:layout_marginTop="4dp" />
 
                         <LinearLayout
@@ -155,6 +190,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
                 android:layout_marginBottom="12dp">
 
                 <LinearLayout
@@ -169,7 +205,7 @@
                         android:text="@string/aglio_icona"
                         android:textSize="40sp"
                         android:gravity="center"
-                        android:background="#E8F5E9"
+                        android:background="?attr/colorPrimaryContainer"
                         android:layout_marginEnd="16dp" />
 
                     <LinearLayout
@@ -189,7 +225,7 @@
                                 android:text="@string/marinara"
                                 android:textSize="18sp"
                                 android:textStyle="bold"
-                                android:textColor="#212121" />
+                                android:textColor="?android:attr/textColorPrimary" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -204,7 +240,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/pomodoro_aglio_origano_olio_evo"
                             android:textSize="14sp"
-                            android:textColor="#666666"
+                            android:textColor="?android:attr/textColorSecondary"
                             android:layout_marginTop="4dp" />
 
                         <TextView
@@ -237,7 +273,7 @@
                 android:text="@string/speciali"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:textColor="#212121"
+                android:textColor="?android:attr/textColorPrimary"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="12dp"
                 android:layout_marginStart="4dp" />
@@ -248,6 +284,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
                 android:layout_marginBottom="12dp">
 
                 <LinearLayout
@@ -262,7 +299,7 @@
                         android:text="@string/piccante_icona"
                         android:textSize="40sp"
                         android:gravity="center"
-                        android:background="#FFEBEE"
+                        android:background="?attr/colorPrimaryContainer"
                         android:layout_marginEnd="16dp" />
 
                     <LinearLayout
@@ -277,14 +314,14 @@
                             android:text="@string/diavola"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:textColor="#212121" />
+                            android:textColor="?android:attr/textColorPrimary" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/pomodoro_mozzarella_salame_piccante_calabrese"
                             android:textSize="14sp"
-                            android:textColor="#666666"
+                            android:textColor="?android:attr/textColorSecondary"
                             android:layout_marginTop="4dp" />
 
                         <TextView
@@ -314,6 +351,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
                 android:layout_marginBottom="12dp">
 
                 <LinearLayout
@@ -328,7 +366,7 @@
                         android:text="@string/formaggio_icona"
                         android:textSize="40sp"
                         android:gravity="center"
-                        android:background="#FFF9C4"
+                        android:background="?attr/colorPrimaryContainer"
                         android:layout_marginEnd="16dp" />
 
                     <LinearLayout
@@ -343,14 +381,14 @@
                             android:text="@string/quattro_formaggi"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:textColor="#212121" />
+                            android:textColor="?android:attr/textColorPrimary" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/mozzarella_gorgonzola_fontina_parmigiano"
                             android:textSize="14sp"
-                            android:textColor="#666666"
+                            android:textColor="?android:attr/textColorSecondary"
                             android:layout_marginTop="4dp" />
 
                         <TextView
@@ -379,6 +417,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
                 android:layout_marginBottom="12dp">
 
                 <LinearLayout
@@ -393,7 +432,7 @@
                         android:text="@string/fungo_pizza"
                         android:textSize="40sp"
                         android:gravity="center"
-                        android:background="#E1F5FE"
+                        android:background="?attr/colorPrimaryContainer"
                         android:layout_marginEnd="16dp" />
 
                     <LinearLayout
@@ -408,14 +447,14 @@
                             android:text="@string/capricciosa"
                             android:textSize="18sp"
                             android:textStyle="bold"
-                            android:textColor="#212121" />
+                            android:textColor="?android:attr/textColorPrimary" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/pomodoro_mozzarella_prosciutto_funghi_carciofi_olive"
                             android:textSize="14sp"
-                            android:textColor="#666666"
+                            android:textColor="?android:attr/textColorSecondary"
                             android:layout_marginTop="4dp" />
                     </LinearLayout>
 
@@ -429,42 +468,15 @@
                         android:layout_gravity="center_vertical" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
-            <com.google.android.material.chip.ChipGroup
-                android:id="@+id/chip_group_filters"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="16dp"
-                app:singleSelection="false">
 
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chip_vegan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="🌱 Vegana"
-                    android:checkable="true" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chip_vegetarian"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="🥦 Vegetariana"
-                    android:checkable="true" />
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/chip_gluten_free"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="🌾 Senza glutine"
-                    android:checkable="true" />
-
-            </com.google.android.material.chip.ChipGroup>
-
+            <!-- RecyclerView for dynamic pizzas -->
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_pizzas"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="8dp"
-                android:clipToPadding="false" />
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false" />
 
             <!-- Info footer -->
             <com.google.android.material.card.MaterialCardView
@@ -472,32 +484,45 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
-                app:cardBackgroundColor="#E3F2FD"
-                android:layout_marginBottom="16dp">
+                app:cardBackgroundColor="?attr/colorSurface"
+                android:layout_marginBottom="32dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:padding="16dp"
-                    android:gravity="center">
+                    android:gravity="center_vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="@string/informazioni"
-                        android:textSize="14sp"
-                        android:textStyle="bold"
-                        android:textColor="#1976D2" />
+                        android:text="ℹ️"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="12dp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:text="@string/tutti_i_prezzi_sono_per_pizza_normale_npossibilit_di_mezza_pizza_1_00"
-                        android:textSize="12sp"
-                        android:textColor="#666666"
-                        android:gravity="center"
-                        android:layout_marginTop="4dp" />
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/informazioni"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="?android:attr/textColorPrimary" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tutti_i_prezzi_sono_per_pizza_normale_npossibilit_di_mezza_pizza_1_00"
+                            android:textSize="12sp"
+                            android:textColor="?android:attr/textColorSecondary"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 

@@ -61,9 +61,9 @@ public class PizzasAdapter extends RecyclerView.Adapter<PizzasAdapter.ViewHolder
 
         ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvEmoji = itemView.findViewById(R.id.tv_pizza_emoji);
+            tvEmoji = itemView.findViewById(R.id.tv_pizza_icon);
             tvName = itemView.findViewById(R.id.tv_pizza_name);
-            tvDesc = itemView.findViewById(R.id.tv_pizza_desc);
+            tvDesc = itemView.findViewById(R.id.tv_pizza_description);
             tvPrice = itemView.findViewById(R.id.tv_pizza_price);
         }
     }

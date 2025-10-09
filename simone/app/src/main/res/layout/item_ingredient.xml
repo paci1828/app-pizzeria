@@ -4,9 +4,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp"
     app:cardCornerRadius="12dp"
     app:cardElevation="2dp"
+    android:layout_margin="4dp"
+    app:cardBackgroundColor="?attr/colorSurface"
+    android:clickable="true"
+    android:focusable="true"
     android:foreground="?attr/selectableItemBackground">
 
     <LinearLayout
@@ -21,18 +24,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="🧀"
-            android:textSize="40sp" />
+            android:textSize="48sp"
+            android:layout_marginBottom="8dp" />
 
         <TextView
             android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Mozzarella"
-            android:textSize="12sp"
+            android:textSize="13sp"
             android:textStyle="bold"
-            android:textColor="#212121"
+            android:textColor="?android:attr/textColorPrimary"
             android:gravity="center"
-            android:layout_marginTop="8dp"
             android:maxLines="2"
             android:ellipsize="end" />
 
@@ -40,13 +43,11 @@
             android:id="@+id/tv_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="+€1.50"
-            android:textSize="11sp"
+            android:text="+€1.00"
+            android:textSize="12sp"
             android:textColor="@color/colorPrimary"
             android:textStyle="bold"
             android:layout_marginTop="4dp"
-            android:visibility="gone" />
-
+            android:visibility="visible" />
     </LinearLayout>
-
 </com.google.android.material.card.MaterialCardView>

@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA">
+    android:background="?android:attr/colorBackground">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -65,6 +65,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
                 android:layout_marginBottom="16dp">
 
                 <LinearLayout
@@ -73,14 +74,28 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/azioni_rapide"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#212121"
-                        android:layout_marginBottom="16dp" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="⚡"
+                            android:textSize="24sp"
+                            android:layout_marginEnd="12dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/azioni_rapide"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="?android:attr/textColorPrimary" />
+                    </LinearLayout>
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/button_call"
@@ -114,6 +129,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
                 android:layout_marginBottom="16dp">
 
                 <LinearLayout
@@ -122,14 +138,28 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/informazioni_di_contatto"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#212121"
-                        android:layout_marginBottom="16dp" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="📇"
+                            android:textSize="24sp"
+                            android:layout_marginEnd="12dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/informazioni_di_contatto"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="?android:attr/textColorPrimary" />
+                    </LinearLayout>
 
                     <!-- Phone -->
                     <LinearLayout
@@ -146,7 +176,7 @@
                             android:text="📱"
                             android:textSize="24sp"
                             android:gravity="center"
-                            android:background="#E3F2FD" />
+                            android:background="?attr/colorPrimaryContainer" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -161,7 +191,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/telefono"
                                 android:textSize="12sp"
-                                android:textColor="#999999" />
+                                android:textColor="?android:attr/textColorSecondary" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -169,7 +199,7 @@
                                 android:text="@string/numero_telefono"
                                 android:textSize="16sp"
                                 android:textStyle="bold"
-                                android:textColor="#212121"
+                                android:textColor="?android:attr/textColorPrimary"
                                 android:layout_marginTop="2dp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -189,7 +219,7 @@
                             android:text="✉️"
                             android:textSize="24sp"
                             android:gravity="center"
-                            android:background="#FFF3E0" />
+                            android:background="?attr/colorPrimaryContainer" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -204,7 +234,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/email"
                                 android:textSize="12sp"
-                                android:textColor="#999999" />
+                                android:textColor="?android:attr/textColorSecondary" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -212,7 +242,7 @@
                                 android:text="@string/info_pizzeria4_it"
                                 android:textSize="16sp"
                                 android:textStyle="bold"
-                                android:textColor="#212121"
+                                android:textColor="?android:attr/textColorPrimary"
                                 android:layout_marginTop="2dp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -231,7 +261,7 @@
                             android:text="📍"
                             android:textSize="24sp"
                             android:gravity="center"
-                            android:background="#E8F5E9" />
+                            android:background="?attr/colorPrimaryContainer" />
 
                         <LinearLayout
                             android:layout_width="0dp"
@@ -246,7 +276,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/indirizzo"
                                 android:textSize="12sp"
-                                android:textColor="#999999" />
+                                android:textColor="?android:attr/textColorSecondary" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -254,7 +284,7 @@
                                 android:text="@string/indirizzo_preciso"
                                 android:textSize="16sp"
                                 android:textStyle="bold"
-                                android:textColor="#212121"
+                                android:textColor="?android:attr/textColorPrimary"
                                 android:layout_marginTop="2dp" />
                         </LinearLayout>
                     </LinearLayout>
@@ -267,6 +297,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
                 android:layout_marginBottom="16dp">
 
                 <LinearLayout
@@ -275,14 +306,28 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/orari_di_apertura"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#212121"
-                        android:layout_marginBottom="16dp" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🕐"
+                            android:textSize="24sp"
+                            android:layout_marginEnd="12dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/orari_di_apertura"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="?android:attr/textColorPrimary" />
+                    </LinearLayout>
 
                     <!-- Days grid -->
                     <LinearLayout
@@ -303,7 +348,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/mar_dom"
                                 android:textSize="14sp"
-                                android:textColor="#212121" />
+                                android:textColor="?android:attr/textColorPrimary" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -317,7 +362,7 @@
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="1dp"
-                            android:background="#E0E0E0"
+                            android:background="?attr/colorOutlineVariant"
                             android:layout_marginVertical="4dp" />
 
                         <!-- Monday -->
@@ -333,7 +378,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/luned"
                                 android:textSize="14sp"
-                                android:textColor="#999999" />
+                                android:textColor="?android:attr/textColorSecondary" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -353,6 +398,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
                 android:layout_marginBottom="16dp">
 
                 <LinearLayout
@@ -361,14 +407,28 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <LinearLayout
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/seguici_sui_social"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#212121"
-                        android:layout_marginBottom="16dp" />
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="🌐"
+                            android:textSize="24sp"
+                            android:layout_marginEnd="12dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/seguici_sui_social"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="?android:attr/textColorPrimary" />
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -435,6 +495,7 @@
                 android:layout_height="200dp"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
                 android:layout_marginBottom="32dp">
 
                 <FrameLayout

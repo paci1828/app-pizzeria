@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F8F9FA">
+    android:background="?android:attr/colorBackground">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -98,7 +98,9 @@
                         android:layout_height="8dp"
                         android:layout_marginTop="24dp"
                         android:max="100"
-                        android:progress="0" />
+                        android:progress="0"
+                        android:progressTint="@android:color/white"
+                        android:progressBackgroundTint="#80FFFFFF" />
 
                     <TextView
                         android:id="@+id/tv_next_reward"
@@ -112,12 +114,13 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Stats Grid -->
+            <!-- Stats Card -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
                 android:layout_marginBottom="16dp">
 
                 <LinearLayout
@@ -147,14 +150,14 @@
                             android:layout_height="wrap_content"
                             android:text="Pizze ordinate"
                             android:textSize="12sp"
-                            android:textColor="#666666"
+                            android:textColor="?android:attr/textColorSecondary"
                             android:layout_marginTop="4dp" />
                     </LinearLayout>
 
                     <View
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
-                        android:background="#E0E0E0" />
+                        android:background="?attr/colorOutlineVariant" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -164,6 +167,7 @@
                         android:gravity="center">
 
                         <TextView
+                            android:id="@+id/tv_rewards_available"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="1"
@@ -176,7 +180,7 @@
                             android:layout_height="wrap_content"
                             android:text="Premi disponibili"
                             android:textSize="12sp"
-                            android:textColor="#666666"
+                            android:textColor="?android:attr/textColorSecondary"
                             android:layout_marginTop="4dp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -188,6 +192,7 @@
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
                 android:layout_marginBottom="16dp">
 
                 <LinearLayout
@@ -200,45 +205,59 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="📱 Il tuo QR Code"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:textColor="#212121"
-                        android:layout_marginBottom="16dp" />
+                        android:text="📱"
+                        android:textSize="24sp"
+                        android:layout_marginBottom="12dp" />
 
                     <ImageView
                         android:id="@+id/iv_qr_code"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:contentDescription="QR Code"
-                        android:background="#F5F5F5" />
+                        android:background="?attr/colorSurfaceVariant"
+                        android:padding="16dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Mostra questo codice al ristorante"
                         android:textSize="12sp"
-                        android:textColor="#999999"
+                        android:textColor="?android:attr/textColorSecondary"
                         android:layout_marginTop="12dp" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-            <!-- Transactions History -->
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- Transactions -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="📜 Storico transazioni"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#212121"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
                 android:layout_marginBottom="12dp"
-                android:layout_marginStart="4dp" />
+                android:layout_marginStart="4dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📜"
+                    android:textSize="20sp"
+                    android:layout_marginEnd="8dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Storico transazioni"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="?android:attr/textColorPrimary" />
+            </LinearLayout>
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
                 app:cardElevation="2dp"
+                app:cardBackgroundColor="?attr/colorSurface"
                 android:layout_marginBottom="16dp">
 
                 <androidx.recyclerview.widget.RecyclerView

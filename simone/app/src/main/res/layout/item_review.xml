@@ -48,7 +48,7 @@
                         android:text="Mario Rossi"
                         android:textSize="14sp"
                         android:textStyle="bold"
-                        android:textColor="#212121" />
+                        android:textColor="?android:attr/textColorPrimary" />
 
                     <TextView
                         android:id="@+id/tv_verified"
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content"
             android:text="Pizza fantastica! Impasto perfetto e ingredienti di qualità."
             android:textSize="14sp"
-            android:textColor="#212121"
+            android:textColor="?android:attr/textColorPrimary"
             android:layout_marginTop="12dp"
             android:lineSpacingExtra="2dp" />
 
