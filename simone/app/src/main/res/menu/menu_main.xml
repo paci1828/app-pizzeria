@@ -2,6 +2,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="simone.pizzeria.app.MainActivity">
+
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
@@ -12,19 +13,17 @@
         android:id="@+id/action_theme"
         android:title="Tema"
         app:showAsAction="never">
-        <menu>
+        <menu android:checkableBehavior="single">
             <item
                 android:id="@+id/theme_auto"
                 android:title="🔄 Automatico"
-                android:checkable="true" />
+                android:checked="true" />
             <item
                 android:id="@+id/theme_light"
-                android:title="☀️ Chiaro"
-                android:checkable="true" />
+                android:title="☀️ Chiaro" />
             <item
                 android:id="@+id/theme_dark"
-                android:title="🌙 Scuro"
-                android:checkable="true" />
+                android:title="🌙 Scuro" />
         </menu>
     </item>
 </menu>

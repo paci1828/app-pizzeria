@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.chip.Chip;
@@ -56,6 +57,13 @@ public class PizzasFragment extends Fragment {
 
     private void filterPizzas(boolean vegan, boolean vegetarian, boolean glutenFree) {
         // Deprecated: now handled by PizzasAdapter.applyFilter
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getActivity() != null) {
+            ((AppCompatActivity) getActivity()).getSupportActionBar().show();
+        }
     }
 }
 

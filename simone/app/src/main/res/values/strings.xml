@@ -54,7 +54,7 @@
     <string name="luned_chiuso">Lunedì chiuso</string>
     <string name="riceverai_una_conferma_via_sms">💡 Riceverai una conferma via SMS</string>
     <string name="dettagli_prenotazione">📋 Dettagli prenotazione</string>
-    <string name="informazioni_personali">👤 Informazioni personali</string>
+    <string name="informazioni_personali"> Informazioni personali</string>
     <string name="prenota_il_tuo_tavolo">Prenota il tuo tavolo</string>
     <string name="calendar_icona">📅</string>
     <string name="compila_il_form_per_riservare">Compila il form per riservare</string>

@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.chip.Chip;
@@ -105,5 +106,13 @@ public class DietarySettingsFragment extends Fragment {
 
     private void showSavedMessage() {
         Toast.makeText(requireContext(), "Preferenza salvata", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getActivity() != null) {
+            ((AppCompatActivity) getActivity()).getSupportActionBar().show();
+        }
     }
 }

@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -237,6 +238,13 @@ public class PizzaBuilderFragment extends Fragment {
                 tvName = view.findViewById(R.id.tv_name);
                 tvPrice = view.findViewById(R.id.tv_price);
             }
+        }
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getActivity() != null) {
+            ((AppCompatActivity) getActivity()).getSupportActionBar().show();
         }
     }
 }

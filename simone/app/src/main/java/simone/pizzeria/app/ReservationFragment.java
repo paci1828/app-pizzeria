@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import java.util.Calendar;
+import java.util.Objects;
+
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresPermission;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -107,6 +110,13 @@ public class ReservationFragment extends Fragment {
             timeInput.setText(tt);
         }, h, min, true);
         dialog.show();
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getActivity() != null) {
+            Objects.requireNonNull(((AppCompatActivity) getActivity()).getSupportActionBar()).show();
+        }
     }
 }
 

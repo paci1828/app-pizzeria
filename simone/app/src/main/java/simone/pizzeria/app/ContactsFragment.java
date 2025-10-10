@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 
@@ -27,6 +28,13 @@ public class ContactsFragment extends Fragment {
             Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:+39123456789"));
             startActivity(intent);
         });
+    }
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (getActivity() != null) {
+            ((AppCompatActivity) getActivity()).getSupportActionBar().show();
+        }
     }
 }
 

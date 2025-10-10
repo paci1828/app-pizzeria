@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -34,6 +35,24 @@ public class FirstFragment extends Fragment {
         List<MenuButton> buttons = getMenuButtons();
         MenuButtonAdapter adapter = new MenuButtonAdapter(buttons, this);
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        // Nascondi la ActionBar quando il FirstFragment è visibile
+        if (getActivity() != null && ((AppCompatActivity) getActivity()).getSupportActionBar() != null) {
+            ((AppCompatActivity) getActivity()).getSupportActionBar().hide();
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        // Mostra la ActionBar quando si esce dal FirstFragment
+        if (getActivity() != null && ((AppCompatActivity) getActivity()).getSupportActionBar() != null) {
+            ((AppCompatActivity) getActivity()).getSupportActionBar().show();
+        }
     }
 
     private List<MenuButton> getMenuButtons() {
